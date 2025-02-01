@@ -3,23 +3,6 @@ import random
 import pgzrun
 from pgzhelper import *
 
-class Characters(Actor):
-    def __init__ (self, coord_x, coord_y, sprites):
-        Actor.__init__(self, sprites, (coord_x, coord_y))
-        self.coord_x = coord_x
-        self.coord_y = coord_y
-        self.sprites = sprites
-
-    def draw(self):
-        Actor.draw(self)
-    
-    def position(self, coord_x, coord_y):
-        self.coord_x = coord_x
-        self.coord_y = coord_y
-
-
-
-teste = Characters(640,320, 'tile_0324')
 #hero variables 
 hero = Actor('hero_stand')
 hero.x = 100
@@ -191,7 +174,6 @@ def draw():
             hero.draw()
             enemy_1.draw()
             enemy_2.draw()
-            teste.draw()
             #map
             tile_1.draw()
             tile_2.draw()
